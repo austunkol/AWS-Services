@@ -6,19 +6,6 @@ It allows your instances to persist data, even aftr their termination
 
 - Think of them as a "Network USB stick"
 
-## Advantage of EC2:
-
-- Elasticity: Capacity needs can be arranged within minutes.
-
-- Control: You can create, stop or terminate instances via EC2 console, CLI or SDKs easily.
-
-- Reliability: EC2 Service Level Agreement (SLA) of 99.99% is committed by Amazon.
-
-- EC2 is a virtual machine,
-
-- We can adjust its capacity according to our needs,
-
-- We pay as much as we use.
 
 ## EBS Volume
 
@@ -86,14 +73,31 @@ It allows your instances to persist data, even aftr their termination
 
     * Write description
 
-# Verify the Snapshot
+## Verify the Snapshot
 
 * On the left hand-side under the `Elastic Block Store` Snapshot
 
-# Copy Snapshot
+## Copy Snapshot
 
 * Choose the Ec2 then hit to Actions menu on the tab
 
 * Click the Copy 
 
 - New Snapshot can be any `Region`
+
+
+# Amazon Machine Image (AMI)
+
+- AMI is a virtual image used to create a virtual machine within an EC2 instance. In other words, it is a virtual machine template containing predefined operating system and application files.
+
+## AMI Types
+
+- `Public`
+  - AMIs managed by the Amazon itself. This package covers common server features.
+
+- `Paid`
+    - Packages created by various companies or independent developers
+
+- `Private`
+    - We can create and manage with AWS Marketplace and Private Image BuildService
+
