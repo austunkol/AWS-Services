@@ -6,7 +6,7 @@ It allows your instances to persist data, even aftr their termination
 
 Think of them as a "Network USB stick"
 
-# EBS Volume
+## EBS Volume
 
 It's network drive(not a physical drive)
 
@@ -14,6 +14,8 @@ It's locked to an Availability Zone(AZ)
 
  EBS volume in us-east-1a cannot be attached to us-east-1b
 
+
+![1.png](/Users/ali/Desktop/clarusway-github/AWS/EBS)
 
 
 
@@ -49,6 +51,31 @@ It's locked to an Availability Zone(AZ)
 
     Come back to EC2 instances check the `Volume ID` 
 
-goto:#https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
+[More Information] (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html)
 
 ** If you terminate EC2, EBS volume will be available or deleted. When we create EC2 if we chose `Delete on Termination` EBS volume will be deleted. This settings Step 4 in Ec2 creatation.
+
+![2.png](/Users/ali/Desktop/clarusway-github/AWS/EBS)
+
+
+# EBS Snapshots 
+
+* Make a back up(snapshot) of your EBS volume at a point
+
+* Can copy snapshots acroos AZ or Region
+
+   * Go to EC2 instances
+
+   * Choose your instance
+
+   * Hit the actions then `create snapshot` next to the create volume
+
+    * Write description
+
+# Verify the Snapshot
+
+* On the left hand-side under the `Elastic Block Store` Snapshot
+
+# Copy Snapshot
+
+* Chose the 
