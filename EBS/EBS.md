@@ -51,7 +51,7 @@ It's locked to an Availability Zone(AZ)
 
     Come back to EC2 instances check the `Volume ID` 
 
-[More Information] (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html)
+[More Information](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html)
 
 ** If you terminate EC2, EBS volume will be available or deleted. When we create EC2 if we chose `Delete on Termination` EBS volume will be deleted. This settings Step 4 in Ec2 creatation.
 
