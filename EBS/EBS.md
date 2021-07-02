@@ -19,8 +19,13 @@ It's locked to an Availability Zone(AZ)
 
 # EBS Hands On
 * Go to EC2
+
     click to Instance
+
     click the Storage
+    
     You can see Root device details/type
+    
     Scrool down and can see Volume ID
-    click the Volume ID/ You can see all EBS VOlume ID's
+    
+    click the Volume ID/ You can see all EBS Volume ID's
