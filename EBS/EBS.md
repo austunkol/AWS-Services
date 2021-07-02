@@ -6,26 +6,25 @@ It allows your instances to persist data, even aftr their termination
 
 Think of them as a "Network USB stick"
 
-* EBS Volume
+## EBS Volume
 
-It's network drive(not a physical drive)
+* It's network drive(not a physical drive)
 
-It's locked to an Availability Zone(AZ)
+* It's locked to an Availability Zone(AZ)
 
- EBS volume in us-east-1a cannot be attached to us-east-1b
+* EBS volume in us-east-1a cannot be attached to us-east-1b
 
+## EBS Hands On
 
+```
+- Go to EC2
 
+- click to Instance
 
-# EBS Hands On
-* Go to EC2
+- click the Storage
 
-    click to Instance
+- You can see Root device details/type
 
-    click the Storage
-    
-    You can see Root device details/type
-    
-    Scrool down and can see Volume ID
-    
-    click the Volume ID/ You can see all EBS Volume ID's
+- Scrool down and can see Volume ID
+- click the Volume ID / You can see all EBS Volume ID's
+```
