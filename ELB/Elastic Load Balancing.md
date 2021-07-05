@@ -1,16 +1,16 @@
 # Elastic Load Balancing (ELB)
 
-![1b.png](./1b.png)
+![1b.png](./Images/1b.png)
 - Automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers.
 
 # `Why use a load balancer?`
-![1c.png](./1c.png)
+![1c.png](./Images/1c.png)
 
 # `Why use an EC2 Load Balancer?`
-![1d.png](./1d.png)
+![1d.png](./Images/1d.png)
 
 ## Load balancer working process
-![1a.png](./1a.png)
+![1a.png](./Images/1a.png)
 
 - ELB is a network service. We can direct the incoming traffic to `Load Balancer`
 - Load Balancer consists of 2 components;
@@ -30,20 +30,20 @@
 - Layer 7 of the OSI Model
 - It identifies the incoming traffic and forwards it to the right resources.
 - It is best suited for the load balancing of HTTP and HTTPS traffic.
-![1e.png](./1e.png)
+![1e.png](./Images/1e.png)
 
 ## ` Good to Know`
-![1f.png](./1f.png)
+![1f.png](./Images/1f.png)
 
 ## `2- Network Load Balancer(v2)`
 - Layer 4 of the OSI model
 - It makes routing at the transport layer (TCP/SSL), and it can handle millions of requests per second.
 - It is best suited for load balancing the TCP traffic when high performance is required.
 - If we need a `simple and fast` load balancer over a basic TCP-based port, this is the Network Load Balancer.
-![1g.png](./1g.png)
+![1g.png](./Images/1g.png)
 
 ## `Good to Know`
-![1h.png](./1h.png)
+![1h.png](./Images/1h.png)
 
 ## `3- Gateway Load Balancer`
 - Gateway Load Balancers enable you to deploy, scale, and manage virtual appliances, such as firewalls, intrusion detection and prevention systems, and deep packet inspection systems
@@ -61,7 +61,7 @@
 	  - Create Load Balancer
 
 ## ` Select Load Balancer Type`
-![1j.png](./1j.png)
+![1j.png](./Images/1j.png)
 
 ## `Step 1 - Configure Load Balancer`
 - `Name:` give a name 
@@ -80,14 +80,14 @@
 - You can use an existing security group or create a new one.
 
 ## ` Step 4 - Configure Routing`
-![1k.png](./1k.png)
+![1k.png](./Images/1k.png)
 - ` Target Group:` Create a new target group
 - ` Name:` Name of the targer group
 - ` Target Type:` Instance - IP - Lambda function
 - `Protocol and Port:` HTTP and 80
 
 ## ` Step 4 - Configure Routing (Health Checks & Advanced Health Check Settings)`
-![1l.png](./1l.png)
+![1l.png](./Images/1l.png)
 
 - `Protocol:` HTTP
 - `Path:` Destination path for health check. defaul `./`
@@ -101,7 +101,7 @@
 - ` Success Codes:` If it receives 200 of the HTTP protocol, it will evaulate healthy.
 
 ## ` Step 5 - Register Targets`
-![1m.png](./1m.png)
+![1m.png](./Images/1m.png)
 
 - Select both of them and clicking the `Add to registered` tab.
 
