@@ -37,11 +37,11 @@
 `Amazon Linux 2 AMI (HVM), SSD Volume Type`
 
 `ami-02354e95b39ca8dec`
-![1a.png](./1a.png)
+![1a.png](./Images/1a.png)
 - Instance Type
 
 `t2.micro`
-![1b.png](./1b.png)
+![1b.png](./Images/1b.png)
 
 
 - Key pair
@@ -62,7 +62,7 @@
 
 
 `Security Group Name: Launch_Temp_Sec_group`
-![1c.png](./1c.png)
+![1c.png](./Images/1c.png)
 
 - Storage (volumes)
 
@@ -106,7 +106,7 @@ Resource type   : Instance
 - Template version description
 
   - `V1 nginx`
-![1d.png](./1d.png)
+![1d.png](./Images/1d.png)
 - Key pair
 
   - ` Select your .pem file name`
@@ -127,7 +127,7 @@ amazon-linux-extras install nginx1.12
 systemctl enable nginx
 systemctl start nginx
 ```
-![1e.png](./1e.png)
+![1e.png](./Images/1e.png)
 
 
 - Go to `Launch Template` Menu and click on `test-Template`
@@ -187,7 +187,7 @@ wget https://raw.githubusercontent.com/awsdevopsteam/ngniex/master/ryu.jpg
 systemctl restart nginx
 systemctl enable nginx
 ```
-![1f.png](./1f.png)
+![1f.png](./Images/1f.png)
 - Go to `Launch Template` Menu and click on `MyClaruswayTemplate`
 - Select Version `3` from `Versions` tab
 
