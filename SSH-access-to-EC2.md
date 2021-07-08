@@ -5,7 +5,7 @@ I want to add new user accounts that can connect to my Amazon Elastic Compute Cl
 * Every Amazon EC2 Linux instance launches with a default system user account with administrative access to the instance. If multiple users require access to the instance, it's a security best practice to use separate accounts for each user.
 
 There are basically two roles here:
-* Admin (EC2 defaul system user) and you will give permission to remote users. 
+* Admin (EC2 default system user) and you will give permission to remote users. 
 * Remote users.
 
 `Admin should follow below steps.`
