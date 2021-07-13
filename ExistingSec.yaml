@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: |
+  This template launch an EC2 with Existing SecGroup that enables SSH 
+  
+Resources:
+  MyEc2:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0ab4d1e9cf9a1215a
+      InstanceType: t2.micro
+      KeyName: dev
+      SecurityGroups:
+        - launch-wizard-3         #Existing SecGroup
+      Tags:
+        - Key: Name 
+          Value: ali-cf-stack-instance
+
+ 
