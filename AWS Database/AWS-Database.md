@@ -175,4 +175,195 @@ MySQL
 -  `Magnetic storage doesn't allow you to scale storage when using the SQL Server database engine`
 - It is limited to a maximum size of `3 TB and 1,000 IOPS.`
 - It doesn't support elastic volumes.
- 
+
+----
+
+## `Automated Backups`
+
+- Amazon RDS provides two different methods for backing up your instance
+
+- `1 Automated Backups`
+- `2 Database Snapshots`
+
+- `Automated Backups`
+- RDS performs the necessary updates and maintenance of the database at the time intervals we will choose
+- We can choose a backup window while creating a DB.
+
+- `Database Snapshots`
+- Amazon RDS allows taking `Snapshot` of RDS DB instance any time.
+- `DB Snapshots` are user-initiated and enable you to back up your DB instance any time you wish.
+
+`Note= When the RDS DB instance is deleted, an Automated Backups are deleted along with it. However, DB Snapshots remain on AWS even if the RDS DB instance is deleted.`
+
+- `Amazon RDS DB` snapshots and automated backups are stored in `S3`
+
+---
+## `RDS Multi-AZ Deployment`
+
+![1k.png](./Images/1k.png)
+
+- RDS creates a replica of the `primary database` for multiple Availability Zones within the same region.
+- We call second replica database as `standby database`
+- `Amazon RDS automatically provisions and maintains a synchronous standby replica.`
+- Each information recordes in the `primary database` is sync to `standby database` located in other AZ
+
+- `Note= If the primary database fault occurs, the standby database is automatically activated.`
+
+`Note= Multi-AZ deployment doesn't provide increase of performace, they ensure the continuity of the data flow`
+
+----
+## `Amazon Read Replicas`
+
+![1l.png](./Images/1l.png)
+
+`Note= Read Replica improves database performance`
+
+[Amazon RDS](https://www.youtube.com/watch?v=eMzCI7S1P9M&t=113s&ab_channel=AmazonWebServices)
+
+---
+
+# `Creating Database`
+
+![1m.png](./Images/1m.png)
+
+- Go to `RDS Service`
+- Select `Database`
+- Click `Create Database`
+
+![1n.png](./Images/1n.png)
+
+- Choose your `Engine Types`
+
+![1o.png](./Images/1o.png)
+
+- If you need `fats and high availability choose Production`
+- `Dev/Test` for Developer
+
+![1p.png](./Images/1p.png)
+
+![1r.png](./Images/1r.png)
+
+- 3 diferent instance class
+
+- `1 Standard Classes (m-classes)`
+- `2 Memory Optimized Classes (r and x classes)`
+- `3 Burstable Classes(t classes)`
+
+![1t.png](./Images/1t.png)
+
+![1v.png](./Images/1v.png)
+
+![1y.png](./Images/1y.png)
+
+![1z.png](./Images/1z.png)
+
+![1x.png](./Images/1x.png)
+
+- RDS can authenticate just using database passwords
+- Second option is RDS authenticates using the user credentials through AWS IAM users and roles.
+
+![1ta.png](./Images/1ta.png)
+
+![1za.png](./Images/1za.png)
+
+- `Backup Window:` We can select the period we want automated backups of the database to be conducted by Amazon RDS or you may not determine any specific time interval
+
+![1zb.png](./Images/1zb.png)
+
+- `Log Exports:` We can select the log types to publish to Amazon CloudWatch Logs
+
+![1zc.png](./Images/1zc.png)
+
+`Note= The maintenance window and the backup window for the DB instance cannot overlap`
+
+---
+# ` MySQL Workbench`
+
+![1zd.png](./Images/1zd.png)
+
+- The information inside the database is arranged to `SQL` , we are not able to reach the data.
+- You need a tool for SSH connection, modify or configure it. We use `MySQL Workbench`
+- `MySQL WorkBench` is a graphical tool.
+
+[Download MySQL Workbench](https://www.mysql.com/products/workbench/)
+
+---
+
+## `Connecting and Modifying Database via MySQL Workbench`
+
+- Select `Database` from menu and click the newly created `database-1`
+
+![1ze.png](./Images/1ze.png)
+
+- Copy the `Endpoint`
+
+![1zf.png](./Images/1zf.png)
+
+- Open `MySQL Workbench` in your laptop and click `+`
+
+![1zg.png](./Images/1zg.png)
+
+- `We setup a new connection:`
+
+- 1 Connection Name= `connection database-1`
+- 2 Host Name= Paste the `endpoint` from aws and the port is 3306
+- 3 Username= Enter `database username` like `admin`
+- 4 Password= Click the `Store in Keychain` and enter the password.
+- 5 Test connection= Before you connect the DB, test the connection click `Test Connection`
+
+![1zh.png](./Images/1zh.png)
+
+- After successfull connection click the `ok`
+
+![1zj.png](./Images/1zh.png)
+
+---
+
+## `Modifying Database with MySQL Workbench`
+
+- There are currently three schemas in our database
+	- InnoDB
+	- Sys
+	- awsdevopsteam (we created while lauching database)
+
+![1zk.png](./Images/1zk.png)
+
+- `Add a Table:`
+- Click the `awsdevopsteam`
+- `Right-click` the `Table` option
+- Select `Create Table`
+
+![1zl.png](./Images/1zl.png)
+
+- `Configure Table:`
+- Let's name our table `Personal_Info`
+- We want to store `ID_number,Name,Surname and Gender`
+- First Row= `ID_number` 
+- Second Row= `Name`
+- Third Row= `Surname`
+- Fourth Row= `Gender`
+- Click `apply`
+
+![1zm.png](./Images/1zm.png)
+
+- `Insert Data into Database`
+- Add some information.
+- His name is `James Bond` his `ID_number is 007`
+- In SQL, to add data into the database, we use `Insert into` command
+
+```
+INSERT INTO Personel_Info
+(ID_number,Name,Surname,Gender)
+VALUES
+('007','James','Bond','Male');
+```
+![1zn.png](./Images/1zn.png)
+
+- After type the script, select the script via mouse and press the `action tab.` 
+
+- Type the command of `SELECT * FROM` to see all data located in this table.
+```
+SELECT * FROM awsdevopsteam.Personel_Info;
+```
+
+![1zo.png](./Images/1zo.png)
