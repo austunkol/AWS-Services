@@ -352,7 +352,7 @@ MySQL
 - In SQL, to add data into the database, we use `Insert into` command
 
 ```
-INSERT INTO Personel_Info
+INSERT INTO Personal_Info
 (ID_number,Name,Surname,Gender)
 VALUES
 ('007','James','Bond','Male');
@@ -363,7 +363,7 @@ VALUES
 
 - Type the command of `SELECT * FROM` to see all data located in this table.
 ```
-SELECT * FROM awsdevopsteam.Personel_Info;
+SELECT * FROM awsdevopsteam.Personal_Info;
 ```
 
 ![1zo.png](./Images/1zo.png)
