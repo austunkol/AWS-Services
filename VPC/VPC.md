@@ -135,3 +135,11 @@
 - Some AWS components such as `NAT Gateway and Route 53 may need Elastic IP` while the process of creating, operating or setting up.
 
 - `Avoid = Elastic IPs are totally free as long as they are being used by an instance. However, Amazon will charge you $0.01/hr for each EIP that you reserve and do not use. So don't forget to terminate the Elastic IP or associated component such as NAT Gateway if you'll not use anymore in the short term.`
+
+## `Creating VPC Notes`
+
+- `Route Table`
+	- Destination = Where you want your package to be delivered.
+	- Target = AWS asks you, by which component (Target) you'll deliver the package to the determined destination.
+
+![1n.png](./Images/1n.png)
