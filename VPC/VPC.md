@@ -143,3 +143,27 @@
 	- Target = AWS asks you, by which component (Target) you'll deliver the package to the determined destination.
 
 ![1n.png](./Images/1n.png)
+
+
+## `Security Groups & Network ACLs`
+
+- Network ACLs are assigned to `Subnets`
+- Security Groups are assigned to `RDS and EC2 Instances.`
+- Security groups are `instance-based` components.
+
+- Network ACLs are `subnet-based` security groups.
+
+- Security Groups `deny all inbound traffic` and `allow all outbound traffic` until `you add rules.`
+
+## `Create ACLs`
+
+- Go to `VPC`
+- Click `Network ACL`
+- Add `Name Tag`
+
+- Choose created `VPC`
+- Create
+
+- `Note= As you remember, in Default Network ACL, all rules are allowed unlike newly created Network ACL`
+
+![1o.png](./Images/1o.png)
