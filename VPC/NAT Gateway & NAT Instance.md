@@ -42,3 +42,35 @@
 - Save routes
 
 # `NAT Instance`
+
+- We prefer NAT Gateway because it manages by AWS and we don't get involved anything. 
+- If your system consists of hundreds of machines and you need some `TCP-based adjustment,` NAT Gateway may not support your needs.
+- `NAT ınstance can be used for Bastion Host`. So, thanks to the NAT instance, you can provide both inbound and outbound connectivity.
+- Another reason is price,  `NAT instance` cheaper than `NAT Gateway`
+
+## `Crating NAT Insance`
+
+- Create EC2 Instance on Public Subnet
+- Set the EC2 Instance via `Route Table` and `Action Menu`
+- Finally, we use this NAT Instance for accessing the internet
+
+- Launch instance from `Community AMI`
+- Then search `NAT`
+- Choose created `VPC` and `public 1-a` subnet
+- Launch
+- Go to EC2 menu
+- Choose created instance then click `Actions`
+- Click `Networking` and `Change Source/Destination Check`
+- Then `Disable` option from the windows that opens
+
+- ` why do we change this settings?`
+- Virtual machines control which source the package comes from and which source it goes to. This is called the `Source/ Destination Check function.` If it detects that package does not match its address, it drops the package.
+
+- Go to `VPC Dashboard`
+- Select `Route Tables`
+- Click the route table we created for `Private Routes`
+- Select `Routes` anc click `Edit Routes`
+- Enter `0.0.0.0/0` `Destination` 
+- Target select the `Instance` then click `NAT Instance`
+
+![1s.png](./Images/1s.png)
