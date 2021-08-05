@@ -79,3 +79,73 @@
 ![1d.png](./Images/1d.png)
 
 ## `Concepts of Route 53`
+
+- Route 53 perform three key functions in any combination.
+
+![1e.png](./Images/1e.png)
+
+### `Domain Registration`
+
+- Route 53 one of the domain-name-provider lets you register a name for your website or web application, known as a domain name.
+
+- After purchasing or leasing, the domain name will be dedicated only you to globally.
+
+### `DNS Routing`
+
+- Route 53 route the internet to the `resources for your domain.`
+
+- When user opens a browser and enters your domain name (austunkol.com) or (www.austunkol.com), Route 53 provides a connection between the browser and your website or web application.
+
+- After you register your domain name, Route 53 routes the web traffic of your domain with the help of the `DNS Record Sets` and `DNS Policies`
+
+### `DNS Health Checking`
+
+- The function checks whether our servers running with Route 53 are working properly. Then it allows mapping the traffic according to the information.
+
+- While Health Checking working, Route 53 send automated requests over the internet to a resource, such as a web server, to verify that it's reacheable , available.
+
+- Also, you can choose receive notifications when a resource becomes unavailable.
+
+- We can create three types of Route 53 Health Checks and use them while creating records.
+
+## `1- Endpoint Health Checks`
+
+- Monitors endpoint that you specify either by IP address or by the domain name.
+
+## `2- Calculated Health Checks`
+
+- We can create a health check that considers the other health checks that may be healthy or unhealthy.
+
+## `3- CloudWatch Health Checks`
+
+- We first create CloudWatch alarms that monitor and then create a health check that monitors the same data stream that CloudWatch monitors for the alarm.
+
+
+## ` Hosted Zones`
+
+- A hosted zone is a container for records, and records contain information about how you want to route traffic for a specific domain.
+
+- For example, if your domain name austunkol.com, you can reach also the same website corresponding to your domain with the help of the records inside these hosted zones when your enter its subdomains such as info.austunkol.com or mobile.austunkol.com on the browser.
+
+- There are two types of hosted zones: `Public Hosted Zones` and `Private Hosted Zones`
+
+![1f.png](./Images/1f.png)
+
+
+## `Public Hosted Zones`
+
+- A public hosted zone is a container that holds information (DNS Records) about how you want to route traffic on the internet for a specific domain. 
+
+- Public Hosted Zones are accessible from the `Public Internet.`
+
+![1g.png](./Images/1g.png)
+
+## `Private Hosted Zones`
+
+- Private hosted zones contain records that specify how you want to route traffic in an `Amazon VPC.`
+
+- Private hosted Zone can only be accessed by our resources in VPC.
+
+- Unlike Public Hosted Zones, `Private Hosted Zones are not created automatically when the domain name is registered with Route 53. So we can create it manually.`
+
+## `DNS Recors Sets`
