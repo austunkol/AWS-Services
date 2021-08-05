@@ -148,4 +148,4 @@
 
 - Unlike Public Hosted Zones, `Private Hosted Zones are not created automatically when the domain name is registered with Route 53. So we can create it manually.`
 
-## `DNS Recors Sets`
+## `DNS Record Sets`
