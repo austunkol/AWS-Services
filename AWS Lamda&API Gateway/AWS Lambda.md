@@ -60,3 +60,9 @@
 - `REST API:` REST APIs offer API proxy functionality and API management features in a single solution. REST APIs offer API management features such as usage plans, API keys, publishing, and monetizing APIs.
 
 - `WebSocket API:` WebSocket APIs maintain a persistent connection between connected clients to enable real-time message communication such as chat apps and streaming dashboards.
+
+## `Lambda and API Gateway`
+
+![1d.png](./Images/1d.png)
+
+-  The most common usage is to set the `API Gateway as a Lambda function trigger.` And usually, the Lambda function triggers the other AWS resources as you see into the picture above.
